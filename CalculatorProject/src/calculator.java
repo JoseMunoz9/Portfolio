@@ -90,6 +90,7 @@ public class calculator {
 		}
 		
 		// System.exit(0);
+		// We close Scanner
 		myScanner.close();
 
 	}
