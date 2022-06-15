@@ -6,6 +6,9 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+// @Author Jose Munoz https://www.linkedin.com/in/jose-munoz90/
+// @Author Jose Munoz https://github.com/JoseMunoz9
+
 public class MenuGUI extends JFrame implements ActionListener {
 	
 	// Basic menu box.
