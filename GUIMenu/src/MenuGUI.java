@@ -58,6 +58,9 @@ public class MenuGUI extends JFrame implements ActionListener {
 		leave.add(subClose);
 		subClose.addActionListener(this);
 		subClose.setActionCommand("Leave Site");
+		
+		this.validate();
+		this.repaint();
 
 	}
 	
