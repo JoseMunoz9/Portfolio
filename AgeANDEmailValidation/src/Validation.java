@@ -56,7 +56,7 @@ public class Validation {
 	
 	public boolean checkEmail (String email) {
 		if (email.endsWith(".com") && email.contains("@")) {
-			System.out.println("Welcome to our world. You may now enjoy.");
+			System.out.println("Welcome to our world " + name + ". You're age is " + age + ". Excellent, you may now enjoy.");
 			return false;
 		} else {
 			System.out.println("Oh, oh! It looks like ' " + email + " ' is not a valid email address. Please try again:");
