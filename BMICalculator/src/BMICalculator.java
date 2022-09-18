@@ -37,7 +37,7 @@ public class BMICalculator {
 			Scanner myHeight = new Scanner(System.in);
 			int height = userInput.nextInt();
 		
-		System.out.println("You have confirmed your weight AND height being " + weight + " - " + height);
+		System.out.println("You have confirmed your weight AND height being " + weight + " , " + height + " respectively.");
 		
 		
 		// Calculating the user's BMI
