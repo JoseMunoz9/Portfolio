@@ -19,7 +19,6 @@ public class BMICalculator {
 	private String name;
 	private int weight;
 	private int height;
-	private double bmi;
 
 	public static void main(String[] args) {
 		new BMICalculator();
