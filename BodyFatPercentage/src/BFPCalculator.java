@@ -102,7 +102,7 @@ public class BFPCalculator {
 		System.out.println("********************");
 		DecimalFormat df = new DecimalFormat("0.0"); // with this line of code we are using the first decimal.
 		System.out.println(name + ", your Body Fat is: " + df.format(BodyFat));
-		System.out.println(name + ", your Body Fat Percentage: " + df.format(BFP) + "%");
+		System.out.println(name + ", your Body Fat Percentage is: " + df.format(BFP) + "%");
 	}
 	
 	// With this method the computer calculates the BFP for a female.
