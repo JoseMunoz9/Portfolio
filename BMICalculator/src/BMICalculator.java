@@ -13,8 +13,8 @@ public class BMICalculator {
 	// ** between 25 and 29.9: over-weight range
 	// ** between 30 and 39.9: obese range
 	// Reference: https://www.nhs.uk/common-health-questions/lifestyle/what-is-the-body-mass-index-bmi
-	// Weight (lb) / Height (in) ^2 * 703 ---> formula to calculate BMI (US conversion)
-	// Weight (kg) / Height (m) ^2 ---> formula to calculate BMI
+	// Weight (lbs) / Height (in) ^2 * 703 ---> formula to calculate BMI (Imperial English BMI formula)
+	// Weight (kgs) / Height (m) ^2 ---> formula to calculate BMI
 	
 	private String name;
 	private int weight;
