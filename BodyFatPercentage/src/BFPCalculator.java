@@ -195,7 +195,7 @@ public class BFPCalculator {
 		System.out.println("Your Body Fat is: " + df.format(BodyFat));
 		
 		System.out.println(" ");
-		System.out.println("Body Fat Percentage: " + df.format(BFP) + "%");
+		System.out.println("Body Fat Percentage is: " + df.format(BFP) + "%");
 	}
 
 }
