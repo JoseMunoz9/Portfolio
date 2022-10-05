@@ -5,10 +5,15 @@ import java.util.Scanner;
 //@Author Jose Munoz https://github.com/JoseMunoz9
 
 public class BMIandBFP {
-	
+	// BFP = Body Fat Percentage
+	// BMI = Body Mass Index
 	// Formula for calculating BFP for women: (1.20 * BMI) + (0.23 * Age) - 5.4 = BFP
 	// Formula for calculating BFP for men: (1.20 * BMI) + (0.23 * Age) - 16.2 = BFP
 	// Formula for calculating BMI: Weight (lbs) / Height (in) ^2 * 703
+	// below 18.5: under-weight range
+	// between 18.5 and 24.9: healthy weight range
+	// between 25 and 29.9: over-weight range
+	// between 30 and 39.9: obese range
 	
 	private String firstName;
 	private String lastName;
