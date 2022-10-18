@@ -95,6 +95,9 @@ public class RockPaperScissors {
 		if(!playAgain.equals("y")) {
 			break;
 		}
+		
+		myScanner.close();
+		myGame.close();
 	}
   }
 }
