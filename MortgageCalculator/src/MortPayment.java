@@ -41,7 +41,7 @@ public class MortPayment {
 		// and Exceptions.
 		// If the user does not enter a correct input, the computer will ask again until it gets
 		// a valid input.
-		// ===============================================================================================
+		// ================================================================================================
 		boolean validPrincipal = false;
 		do {
 			System.out.println("Enter the principal amount: "); // The total of the loan.
