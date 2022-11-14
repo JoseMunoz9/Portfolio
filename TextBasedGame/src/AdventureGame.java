@@ -27,7 +27,7 @@ public class AdventureGame {
 		
 		GAME: // We are setting the while loop's name as GAME
 			while(running) {
-				System.out.println("--------------------------------------------");
+				System.out.println("---------------------------------------------");
 				
 				int enemyHealth = myRandom.nextInt(maxEnemyHealth);
 				
