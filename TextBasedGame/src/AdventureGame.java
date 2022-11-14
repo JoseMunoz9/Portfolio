@@ -68,7 +68,7 @@ public class AdventureGame {
 							numHealthP--;
 							System.out.println("\t> You drink a health potion, healing yourself for " + healthPHealAmount + "."
 												+ "\n\t> You now have " + health + " HP."
-												+ "\n\t> You have " + numHealthP + " health potions left.\n");
+												+ "\n\t> You have " + numHealthP + " health potion(s) left.\n");
 						}
 						else {
 							System.out.println("\t> You have no health potions left! Defeat enemies for a chance to get one.\n");
