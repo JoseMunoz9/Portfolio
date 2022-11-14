@@ -91,7 +91,7 @@ public class AdventureGame {
 				}
 				
 				System.out.println("--------------------------------------------------");
-				System.out.println(" * " + enemy + " was defeated! * ");
+				System.out.println(" * The " + enemy + " was defeated! * ");
 				System.out.println(" * You have " + health + " HP left. * ");
 				
 				if (myRandom.nextInt(100) < healthPDropChance) {
