@@ -82,7 +82,7 @@ public class AdventureGame {
 						continue GAME;
 					}
 					else {
-						System.out.println("\tInvalid input!");
+						System.out.println("\tInvalid input. Try again!");
 					}
 				}
 				if (health < 1) {
@@ -91,13 +91,13 @@ public class AdventureGame {
 				}
 				
 				System.out.println("--------------------------------------------------");
-				System.out.println(" # " + enemy + " was defeated! # ");
-				System.out.println(" # You have " + health + " HP left. # ");
+				System.out.println(" * " + enemy + " was defeated! * ");
+				System.out.println(" * You have " + health + " HP left. * ");
 				
 				if (myRandom.nextInt(100) < healthPDropChance) {
 					numHealthP++;
-					System.out.println(" # The " + enemy + " dropped a health potion! # ");
-					System.out.println("# You now have " + numHealthP + " health potion(s). # ");
+					System.out.println(" * The " + enemy + " dropped a health potion! * ");
+					System.out.println(" * You now have " + numHealthP + " health potion(s). * ");
 				}
 				System.out.println("---------------------------------------------------");
 				System.out.println("What would you like to do now?");
@@ -107,7 +107,7 @@ public class AdventureGame {
 				String input = userInput.nextLine();
 				
 				while(!input.equals("1") && !input.equals("2")) {
-					System.out.println("Invalid input!");
+					System.out.println("Invalid input. Try again!");
 					input = userInput.nextLine();
 				}
 				
@@ -117,11 +117,11 @@ public class AdventureGame {
 					System.out.println("You exit the Dungeon successful from your fight!");
 					break;
 				}
-				userInput.close();
 			}
-		System.out.println("#######################");
-		System.out.println("# THANKS FOR PLAYING! #");
-		System.out.println("#######################");
+		userInput.close();
+		System.out.println("=========================");
+		System.out.println("** THANKS FOR PLAYING! **");
+		System.out.println("=========================");
 	}
 
 }
