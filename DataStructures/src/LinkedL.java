@@ -58,6 +58,7 @@ public class LinkedL {
 					in3 = myLinkedList.nextLine();
 				}
 					if(in3.equals("1")) {
+					// With this line of code we are removing an element from the list.
 					myLinkedL.remove(0);
 					System.out.println("> Jose has been removed from the list. The updated list is:");
 					System.out.println(myLinkedL);
@@ -82,6 +83,7 @@ public class LinkedL {
 					in3 = myLinkedList.nextLine();
 				}
 					if (in3.equals("1")) {
+					// With this line of code we are removing an element from the list.
 					myLinkedL.remove(1);
 					System.out.println("> Max has been removed from the list. The updated list is:");
 					System.out.println(myLinkedL);
@@ -106,6 +108,7 @@ public class LinkedL {
 					in3 = myLinkedList.nextLine();
 				}
 					if (in3.equals("1")) {
+					// With this line of code we are removing an element from the list.
 					myLinkedL.remove(2);
 					System.out.println("** Alex has been removed from the list. The updated list is: **");
 					System.out.println(myLinkedL);
@@ -122,6 +125,7 @@ public class LinkedL {
 			
 			// String in4 is the variable for the input asked above.
 			String in4 = myLinkedList.nextLine();
+			// With this line of code we are adding an element to the list.
 			myLinkedL.add(in4);
 			System.out.println("> The updated list is: " +
 							   "\n" + myLinkedL);
