@@ -10,7 +10,7 @@ public class LinkedL {
 		
 		Scanner myLinkedList = new Scanner(System.in);
 		
-		LinkedList myLinkedL = new LinkedList();
+		LinkedList<String> myLinkedL = new LinkedList<String>();
 		
 		myLinkedL.add("Jose");
 		myLinkedL.add("Max");
