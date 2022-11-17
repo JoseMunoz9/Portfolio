@@ -18,6 +18,7 @@ public class Queues {
 		Scanner myQueue = new Scanner(System.in);
 		Queue<String> books = new LinkedList<String>();
 		
+		// Adding elements to the Queue.
 		books.add("Dracula");
 		books.add("The Complete Grimoire");
 		books.add("The Vampire Diaries");
@@ -32,6 +33,7 @@ public class Queues {
 		System.out.println("These are the books we have: "
 						   + "\n" + books);
 			while (running) {
+				// Main menu of the Library.
 				System.out.println("> What would you like to do?");
 				System.out.println("\t1. Select a book.");
 				System.out.println("\t2. Check if a particular book is in the Library.");
@@ -77,7 +79,7 @@ public class Queues {
 					
 					if (!input3.equals("Dracula") && !input3.equals("The Complete Grimoire")
 							&& !input3.equals("The Vampire Diaries")) {
-						System.out.println(">" + input3 + " is not in our system.");
+						System.out.println("> " + input3 + " is not in our Library.");
 					}
 				}
 				// ================================================================================
@@ -113,7 +115,7 @@ public class Queues {
 					System.out.println("> Type in the name of the book you'd like to add: ");
 					String input5 = myQueue.nextLine();
 					books.add(input5); // To add an element to the Queue.
-					System.out.println("\t#" + input5 + " has been added to the Queue.");
+					System.out.println("\t# " + input5 + " has been added to the Queue.");
 					System.out.println("\t# The updated list is: "
 							+ "\n" + books);
 				}
@@ -125,7 +127,7 @@ public class Queues {
 				String input6 = myQueue.nextLine();
 				
 				while (!input6.equals("1") && !input6.equals("2")) {
-					System.out.println("You must select a number from the options given above.");
+					System.out.println("** You must select a number from the options given above. **");
 					input6 = myQueue.nextLine();
 				}
 				if (input6.equals("1")) {
