@@ -10,18 +10,21 @@ public class LinearSearch {
 		Scanner myLinear = new Scanner (System.in);
 				
 		// String input2 = Integer.toString(input1); // To convert integer into String.
-		int[] array = {25, 28, 26, 27, 30, 29, 31, 33, 32, 34, 36, 35};
+		int[] array = {25, 28, 26, 27, 30};
 		
 		System.out.println("*** Welcome to Linear Class ***");
 		boolean running = true;
 		
 		while (running) {
 				
-			System.out.println("> Select a number from 25 to 36 to know the index"
+			System.out.println("> Select a number from Array List to know the index"
 					+ " in which they have been allocated:");
+			printArray(array);
+			System.out.println("** Integers only **");
 			int input1 = myLinear.nextInt(); // User's input.
 			int index = linearSearch(array, input1); // Declaring the Linear Search function and
 			// getting the user's input to search in the array.
+			
 			
 			// If index is not equal to -1 it means that the value of the user's input does exist
 			// in the Array list.
@@ -41,7 +44,7 @@ public class LinearSearch {
 				answer = myLinear.nextLine();
 			}
 			if (answer.equals("1")) {
-				System.out.println("> Let's try again your luck!");
+				System.out.println("> Let's try again!");
 			} else if (answer.equals("2")) {
 				System.out.println("** You have successfully closed the program. **");
 				break;
@@ -52,6 +55,13 @@ public class LinearSearch {
 		System.out.println("** THIS IS HOW LINEAR SEARCH WORKS **");
 		System.out.println("=====================================");
 
+	}
+
+	private static void printArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
+		
 	}
 
 	private static int linearSearch(int[] array, int value) {
