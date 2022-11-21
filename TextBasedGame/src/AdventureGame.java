@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class AdventureGame {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Scanner userInput = new Scanner(System.in);
 		Random myRandom = new Random();
