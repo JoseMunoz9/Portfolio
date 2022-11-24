@@ -11,6 +11,9 @@ public class Animal {
 	public String getName() {
 		return name;
 	}
+	public void type() {
+		System.out.println("Dog & Cat");
+	}
 	
 	public void setName(String name) {
 		this.name = name;

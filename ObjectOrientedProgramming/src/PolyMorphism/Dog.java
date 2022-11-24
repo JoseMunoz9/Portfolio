@@ -2,11 +2,15 @@ package PolyMorphism;
 
 // Dog is a child class from Animal (parent class).
 public class Dog extends Animal {
+	private String name;
 	private int breed;
 	
 	// We can override a method of a parent class.
 	public void eat() {
 		System.out.println("Pedigree");
+	}
+	public void name() {
+		System.out.println("Charlie - this is a dog.");
 	}
 	
 	// We can overload a method this way.
@@ -18,6 +22,12 @@ public class Dog extends Animal {
 		for (int i = 0; i < numberOfTimes; i++) {
 			System.out.println("Pedigree");	
 		}
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	public int getBreed() {
 		return breed;
