@@ -37,8 +37,10 @@ public class Polymorphism {
 				myCat.eat();
 			} else if (input.equals("3")) {
 				System.out.println("> The names are: ");
-				myDog.name(); // 'name' is our method in both of child classes.
-				myCat.name();
+				myDog.setName("Charlie");
+				myCat.setName("Luna");
+				System.out.println(myDog.getName() + " - This is a Dog!");
+				System.out.println(myCat.getName() + " - This is a Cat!");
 			}
 			
 			System.out.println("> What would you like to do now?");

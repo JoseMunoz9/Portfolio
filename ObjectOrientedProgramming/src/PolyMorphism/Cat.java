@@ -9,9 +9,6 @@ public class Cat extends Animal {
 	public void eat() {
 		System.out.println("Whiskas");
 	}
-	public void name() {
-		System.out.println("Luna - this is a cat.");
-	}
 	public String getName() {
 		return name;
 	}

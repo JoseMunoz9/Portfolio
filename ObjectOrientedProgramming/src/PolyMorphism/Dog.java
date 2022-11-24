@@ -9,10 +9,6 @@ public class Dog extends Animal {
 	public void eat() {
 		System.out.println("Pedigree");
 	}
-	public void name() {
-		System.out.println("Charlie - this is a dog.");
-	}
-	
 	// We can overload a method this way.
 	// Same method as before, with different parameters.
 	// This one is taking an 'integer' as parameter.
