@@ -3,7 +3,7 @@ package BodyMassFatIndex;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Female extends Calculator {
+public class Female extends Calculator implements Welcome {
 	//In this method we are calculating both BMI and BFP for a FEMALE.
 	// The formula for calculating BFP for a female is a bit different.
 	// This is the reason why I divided the calculator in two.
@@ -12,6 +12,22 @@ public class Female extends Calculator {
 	int age;
 	int weight;
 	int height;
+	
+	@Override
+	public void WelcomeMessage() {
+		
+		System.out.println("=============================================");		
+		System.out.println("     WELCOME TO THE FEMALE CALCULATOR        ");		
+		System.out.println("=============================================");
+		System.out.println();
+		System.out.println("> Note:");
+		System.out.println("\tBelow 18.5: under-weight range");
+		System.out.println("\tBetween 18.5 and 24.9: healthy weight range");
+		System.out.println("\tBetween 25 and 29.9: over-weight range");
+		System.out.println("\tBetween 30 and 39.9: obese range");
+		System.out.println();
+		System.out.println("<< HERE WE GO! >>");
+	}
 	
 	@Override
 	public void BMIandBFP() {
@@ -77,10 +93,12 @@ public class Female extends Calculator {
 			double bfp = (1.20 * bmi) + (0.23 * age) - 5.4; // formula for calculating BFP for a FEMALE.
 			DecimalFormat df = new DecimalFormat("0.0"); // with this line of code we are asking the computer to use the first decimal.
 			
-			System.out.println("Ms. " + firstName + " " + lastName + ", your BMI is: " + df.format(bmi)
-			+ "\nand your BFP is: " + df.format(bfp));
 			System.out.println("===============================================");
-			System.out.println("> What would you like to do now?");
+			System.out.println("Ms " + firstName + " " + lastName + ", these are your results:");
+			System.out.println("\tBMI: " + df.format(bmi)
+							   + "\n\tBFP: " + df.format(bfp));
+			System.out.println("===============================================");
+			System.out.println("> Made a mistake with your DATA?");
 			System.out.println("\t1. Let's try again!");
 			System.out.println("\t2. Close the calculator.");
 			String input4 = myFemme.nextLine();
@@ -104,5 +122,4 @@ public class Female extends Calculator {
 		System.out.println("=====================");
 		
 	}
-
 }

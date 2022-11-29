@@ -3,7 +3,7 @@ package BodyMassFatIndex;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Male extends Calculator {
+public class Male extends Calculator implements Welcome {
 	// In this method we are calculating both BMI and BFP for a MALE.
 	// The formula for calculating BFP for a man is different.
 	// This is why I have divided the calculator in two. One for MALE and a second one for a FEMALE.
@@ -12,6 +12,21 @@ public class Male extends Calculator {
 	int age;
 	int weight;
 	int height;
+	
+	@Override
+	public void WelcomeMessage() {
+		System.out.println("=============================================");		
+		System.out.println("       WELCOME TO THE MALE CALCULATOR        ");		
+		System.out.println("=============================================");
+		System.out.println();
+		System.out.println("> Note:");
+		System.out.println("\tBelow 18.5: under-weight range");
+		System.out.println("\tBetween 18.5 and 24.9: healthy weight range");
+		System.out.println("\tBetween 25 and 29.9: over-weight range");
+		System.out.println("\tBetween 30 and 39.9: obese range");
+		System.out.println();
+		System.out.println("<< HERE WE GO! >>");
+	}
 	
 	@Override
 	public void BMIandBFP() {
@@ -75,10 +90,12 @@ public class Male extends Calculator {
 			double bfp = (1.20 * bmi) + (0.23 * age) - 16.2; // formula for calculating BFP using BMI data.
 			DecimalFormat df = new DecimalFormat("0.0"); // with this line of code we are asking the computer to use the first decimal only.
 			
-			System.out.println("> Mr. " + firstName + " " + lastName + ", your BMI is: " + df.format(bmi)
-							   + "\n& your BFP is: " + df.format(bfp));
 			System.out.println("===============================================");
-			System.out.println("> What would you like to do now?");
+			System.out.println(" > Mr " + firstName + " " + lastName + ", these are your results:");
+			System.out.println("\tBMI: " + df.format(bmi)
+							   + "\n\tBFP: " + df.format(bfp));
+			System.out.println("===============================================");
+			System.out.println("> Made a mistake with your DATA?");
 			System.out.println("\t1. Let's try again!");
 			System.out.println("\t2. Close the calculator.");
 			String input4 = myMan.nextLine();
@@ -100,5 +117,4 @@ public class Male extends Calculator {
 		System.out.println("** HAVE A GOOD DAY **");
 		System.out.println("=====================");
 	}
-
 }

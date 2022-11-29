@@ -17,10 +17,10 @@ public class Main {
 		System.out.println("*****  WELCOME TO BMI & BFP CALCULATOR  *****");
 		System.out.println("== Body Mass Index and Body Fat Percentage ==");
 		System.out.println();
-		System.out.println("> There are two formulas to calculate BMI & BFP."
-				+ "\n\tGeneral BMI formula: Weight (lbs) / Height (in) ^2 * 703"
-				+ "\n\tFor women: (1.20 * BMI) + (0.23 * Age) - 5.4 = BFP"
-				+ "\n\tFor men: (1.20 * BMI) + (0.23 * Age) - 16.2 = BFP");
+		System.out.println("> There is ONE formula to calculate BMI & TWO for BFP:"
+				+ "\n\tBMI formula: Weight (lbs) / Height (in) ^2 * 703"
+				+ "\n\tFEMALE: (1.20 * BMI) + (0.23 * Age) - 5.4 = BFP"
+				+ "\n\tMALE: (1.20 * BMI) + (0.23 * Age) - 16.2 = BFP");
 		System.out.println();
 		System.out.println("> Let's begin: What's your gender?");
 		System.out.println("\t1. Female");
@@ -35,8 +35,10 @@ public class Main {
 		}
 		// 'IF' statements to apply the proper method for each option from the menu above.
 		if (gender.equals("1")) {
+			myFemale.WelcomeMessage();
 			myFemale.BMIandBFP(); // Calculator method for a female.
 		} else if (gender.equals("2")) {
+			myMale.WelcomeMessage();
 			myMale.BMIandBFP(); // Calculator method for a male.
 		}
 		myCalculator.close();
