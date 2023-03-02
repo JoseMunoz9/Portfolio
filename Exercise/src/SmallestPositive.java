@@ -1,5 +1,8 @@
 import java.util.Arrays;
 
+//@Author Jose Munoz https://www.linkedin.com/in/jose-munoz90/
+//@Author Jose Munoz https://github.com/JoseMunoz9
+
 public class SmallestPositive {
 
 	// Write a function that, given an array A of N integers

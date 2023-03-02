@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+//@Author Jose Munoz https://www.linkedin.com/in/jose-munoz90/
+//@Author Jose Munoz https://github.com/JoseMunoz9
+
+// Given an integer N, return the smallest non-negative integer whose individual digits sum to N.
+
 public class IndividualSumN {
 
 	// Sum of digits - FUNCTION
