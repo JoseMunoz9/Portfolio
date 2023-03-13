@@ -20,10 +20,10 @@ public class Male extends Calculator implements Welcome {
 		System.out.println("=============================================");
 		System.out.println();
 		System.out.println("> Note:");
-		System.out.println("\tBelow 18.5: under-weight range");
-		System.out.println("\tBetween 18.5 and 24.9: healthy weight range");
-		System.out.println("\tBetween 25 and 29.9: over-weight range");
-		System.out.println("\tBetween 30 and 39.9: obese range");
+		System.out.println("\t- Below 18.5: under-weight range");
+		System.out.println("\t- Between 18.5 and 24.9: healthy weight range");
+		System.out.println("\t- Between 25 and 29.9: over-weight range");
+		System.out.println("\t- Between 30 and 39.9: obese range");
 		System.out.println();
 		System.out.println("<< HERE WE GO! >>");
 	}
@@ -94,6 +94,20 @@ public class Male extends Calculator implements Welcome {
 			System.out.println(" > Mr " + firstName + " " + lastName + ", these are your results:");
 			System.out.println("\tBMI: " + df.format(bmi)
 							   + "\n\tBFP: " + df.format(bfp));
+			if(bmi < 18.5) {
+				System.out.println(firstName + ", your results indicate that you are on the 'underweight' range."
+						+ "\n\t> Your BMI is under 18.5");
+			} else if(bmi >= 18.5 && bmi <= 24.9) {
+				System.out.println(firstName + ", your results indicate that you are on the 'healthy weight' range:"
+						+ "\n\t> Your BMI is between 18.5 - 24.9"
+						+ "\n\tCongratulations, keep it up!!");
+			} else if(bmi >= 25 && bmi <= 29.9) {
+				System.out.println(firstName + ", your results indicate that you are on the 'overweight' range."
+						+ "\n\t> Your BMI is between 25 - 29.9");
+			} else if(bmi >= 30 && bmi <= 39.9) {
+				System.out.println(firstName + ", these are not good news. Your BMI "
+						+ "is between 30 - 39.9 which falls in the 'obese' category.");
+			}
 			System.out.println("===============================================");
 			System.out.println("> Made a mistake with your DATA?");
 			System.out.println("\t1. Let's try again!");

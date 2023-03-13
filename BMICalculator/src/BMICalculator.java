@@ -27,12 +27,17 @@ public class BMICalculator {
 	BMICalculator(){
 		Scanner userInput = new Scanner(System.in);
 		
-		System.out.println("Hello and welcome to BMI calculator. Please, enter your name:");
+		System.out.println("===========================");
+		System.out.println("    **BODY MASS INDEX**    ");
+		System.out.println("===========================");
+		System.out.println("Welcome to BMI calculator"
+				+ "\nPlease, enter your name:");
 		name = userInput.nextLine();
 		
 		// Asking the user to type in their weight.
 		
-		System.out.println("Thanks " + name + ". Let us calculate your BMI.");
+		System.out.println("Thanks, " + name + 
+				"\nLet us calculate your BMI.");
 		
 		// Here we are using a do-while loop just so that the program does not crash
 		// in case invalid answer is entered.
@@ -66,7 +71,8 @@ public class BMICalculator {
 			}
 		} while (validInches == false);
 		
-		System.out.println("Fantastic, your data is " + weight + "lbs and " + height + " inches.");
+		System.out.println("Fantastic, your data is: "
+		+ weight + "lbs and " + height + " inches.");
 		
 		
 		// Calculating the user's BMI.
@@ -74,7 +80,9 @@ public class BMICalculator {
 		double bmi = weight / Math.pow(height, 2) * 703;
 		
 		DecimalFormat df = new DecimalFormat("0.0"); // With this line of code we are using the first decimal place.
-		System.out.println(name + ", your BMI is: " + df.format(bmi));
+		System.out.println(name + ", your BMI is: "
+		+"\nCalculating..." 
+				+ "\n" + df.format(bmi));
 		
 		
 		userInput.close();

@@ -10,6 +10,7 @@ public class Fibonacci {
 	public static void main(String[] args) {
 		Scanner myScanner = new Scanner(System.in);
 		String name;
+		String menu;
 		int n = 92;
 		
 		fibonacciCache = new long[n + 1];
@@ -51,7 +52,7 @@ public class Fibonacci {
 		System.out.println("\t1. Let's do it again!");
 		System.out.println("\t2. Exit the Fibonacci Class.");
 		
-		String menu = myScanner.nextLine();
+		menu = myScanner.nextLine();
 		
 		while(!menu.equals("1") && !menu.equals("2")) {
 			System.out.println("You must select one of the options above. Try again!");
