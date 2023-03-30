@@ -12,8 +12,8 @@ public class Main {
 		Scanner allinOne = new Scanner(System.in);
 		
 		// Instantiation of classes
-		Calculator myCalculator = new Calculator();
-		Game myGame = new Game();
+		Calculator myCalculator = new Calculator(allinOne);
+		Game myGame = new Game(allinOne);
 		
 		boolean running = true;
 				

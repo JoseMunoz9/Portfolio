@@ -8,12 +8,19 @@ import java.util.Scanner;
 
 public class Calculator {
 	
+	// Calculator class that requires Scanner: 'allinOne' dependency.
+	Scanner allinOne;
+	
+	public Calculator(Scanner allinOne) {
+		this.allinOne = allinOne;
+	}
+	
 	public void calculator() {
-		Scanner myCalculator = new Scanner(System.in);
+	//	Scanner myCalculator = new Scanner(System.in);
 		
 		// Instantiation of our classes, MALE and FEMALE:
-		Male myMale = new Male();
-		Female myFemale = new Female();
+		Male myMale = new Male(allinOne);
+		Female myFemale = new Female(allinOne);
 		
 		System.out.println("*****  WELCOME TO BMI & BFP CALCULATOR  *****");
 		System.out.println("== Body Mass Index and Body Fat Percentage ==");
@@ -26,13 +33,13 @@ public class Calculator {
 		System.out.println("> Let's begin: What's your gender?");
 		System.out.println("\t1. Female");
 		System.out.println("\t2. Male");
-		String gender = myCalculator.nextLine();
+		String gender = allinOne.nextLine();
 		
 		// While loop for validation, to make sure the user enters a valid answer/option/input.
 		
 					while (!gender.equals("1") && !gender.equals("2")) {
 						System.out.println("You need to select a number from the menu.");
-						gender = myCalculator.nextLine();
+						gender = allinOne.nextLine();
 					}
 					// 'IF' statements to apply the proper method for each option from the menu above.
 					if (gender.equals("1")) {
@@ -42,6 +49,5 @@ public class Calculator {
 						myMale.WelcomeMessage();
 						myMale.BMIandBFP(); // Calculator method for a male.
 					}
-				// myCalculator.close();
 			}
 }

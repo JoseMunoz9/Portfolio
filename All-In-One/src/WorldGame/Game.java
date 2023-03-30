@@ -6,12 +6,19 @@ import java.util.Scanner;
 
 public class Game {
 	
+	// Game class that requires Scanner: 'allinOne' dependency.
+		Scanner allinOne;
+		
+		public Game(Scanner allinOne) {
+			this.allinOne = allinOne;
+		}
+	
 	public void Fun() {
-		Scanner myGame = new Scanner(System.in);
+	//	Scanner myGame = new Scanner(System.in);
 		
 		// Instantiation of the classes
-		PlayOFF myDungeon = new PlayOFF();
-		RPS myRockPaperScissors = new RPS();
+		PlayOFF myDungeon = new PlayOFF(allinOne);
+		RPS myRockPaperScissors = new RPS(allinOne);
 		
 		// Part of a while loop.
 		// The game will keep running over and over until some conditions are met.
@@ -28,7 +35,7 @@ public class Game {
 			System.out.println("\t2. Rock, Paper, Scissors");
 			System.out.println("\t3. Exit the Game World");
 						
-			String menu = myGame.nextLine();
+			String menu = allinOne.nextLine();
 			
 			if (menu.equals("1")) {
 				myDungeon.WelcomeMessage();
@@ -44,8 +51,6 @@ public class Game {
 				System.out.println("=================================");
 			}
 		}
-		
-		//myGame.close();
 	}
 	
 }

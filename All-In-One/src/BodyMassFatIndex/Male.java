@@ -8,6 +8,13 @@ import java.util.Scanner;
 
 public class Male extends Formula implements Welcome{
 	
+	// Male class that requires Scanner: 'allinOne' dependency.
+			Scanner allinOne;
+			
+			public Male(Scanner allinOne) {
+				this.allinOne = allinOne;
+			}
+	
 	// In this method we are calculating both BMI and BFP for a MALE.
 	// The formula for calculating BFP for a man is different.
 	// This is why I have divided the calculator in two. One for MALE and a second one for a FEMALE.
@@ -39,11 +46,11 @@ public class Male extends Formula implements Welcome{
 	@Override
 	public void BMIandBFP() {
 		
-		Scanner myMan = new Scanner(System.in);
+	//	Scanner myMan = new Scanner(System.in);
 		System.out.println("> Enter your first name:");
-		firstName = myMan.nextLine();
+		firstName = allinOne.nextLine();
 		System.out.println("> Enter your surname:");
-		lastName = myMan.nextLine();
+		lastName = allinOne.nextLine();
 		System.out.println("Thank you Mr " + lastName + ". Let's calculate your BMI & BFP");
 		
 		boolean running = true;
@@ -53,7 +60,7 @@ public class Male extends Formula implements Welcome{
 			// The program will not crash and it will keep running and asking until it gets a valid input.
 			do {
 				System.out.println("> Enter your age: ");
-				String ageString = myMan.nextLine();
+				String ageString = allinOne.nextLine();
 				
 				try {
 					age = Integer.parseInt(ageString);
@@ -68,7 +75,7 @@ public class Male extends Formula implements Welcome{
 			// The program will not crash and it will keep running and asking until it gets a valid input.
 			do {
 				System.out.println("> Enter your weight in pounds: ");
-				String weightString = myMan.nextLine();
+				String weightString = allinOne.nextLine();
 				
 				try {
 					weight = Integer.parseInt(weightString);
@@ -83,7 +90,7 @@ public class Male extends Formula implements Welcome{
 			// The program will not crash and it will keep running and asking until it gets a valid input.
 			do {
 				System.out.println("> Enter your height in inches: ");
-				String heightString = myMan.nextLine();
+				String heightString = allinOne.nextLine();
 				
 				try {
 					height = Integer.parseInt(heightString);
@@ -121,12 +128,12 @@ public class Male extends Formula implements Welcome{
 			System.out.println("> Made a mistake with your DATA?");
 			System.out.println("\t1. Let's try again!");
 			System.out.println("\t2. Close the calculator.");
-			String input4 = myMan.nextLine();
+			String input4 = allinOne.nextLine();
 			
 			// While loop for validation, to make sure the user enters a valid answer/option/input.
 			while (!input4.equals("1") && !input4.equals("2")) {
 				System.out.println("## You need to choose a number from the options above! ##");
-				input4 = myMan.nextLine();
+				input4 = allinOne.nextLine();
 			}
 			if (input4.equals("1")) {
 				System.out.println("Let's go again!");
@@ -135,8 +142,7 @@ public class Male extends Formula implements Welcome{
 				System.out.println("==================================================");
 				break;
 			}
-		}
-		// myMan.close();		
+		}	
 	}
 
 }

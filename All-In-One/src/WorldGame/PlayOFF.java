@@ -8,7 +8,14 @@ import java.util.Scanner;
 
 public class PlayOFF extends Adventure implements Welcome {
 	
-	Scanner userInput = new Scanner(System.in);
+	// PlayOFF class that requires Scanner: 'allinOne' dependency.
+			Scanner allinOne;
+			
+			public PlayOFF(Scanner allinOne) {
+				this.allinOne = allinOne;
+			}
+	
+//	Scanner userInput = new Scanner(System.in);
 	Random myRandom = new Random();
 	
 	// Game variables
@@ -53,7 +60,7 @@ public class PlayOFF extends Adventure implements Welcome {
 					System.out.println("\t2. Drink health potion");
 					System.out.println("\t3. Run");
 					
-					String input = userInput.nextLine();
+					String input = allinOne.nextLine();
 					
 					if(input.equals("1")) {
 						int damageDealt = myRandom.nextInt(attackD);
@@ -111,11 +118,11 @@ public class PlayOFF extends Adventure implements Welcome {
 				System.out.println("1. Continue fighting");
 				System.out.println("2. Exit the Dungeon");
 				
-				String input = userInput.nextLine();
+				String input = allinOne.nextLine();
 				
 				while(!input.equals("1") && !input.equals("2")) {
 					System.out.println("Invalid input. Try again!");
-					input = userInput.nextLine();
+					input = allinOne.nextLine();
 				}
 				
 				if(input.equals("1")) {

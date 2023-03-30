@@ -8,12 +8,19 @@ import java.util.Random;
 
 public class RPS {
 	
+	// RPS class that requires Scanner: 'allinOne' dependency.
+			Scanner allinOne;
+			
+			public RPS(Scanner allinOne) {
+				this.allinOne = allinOne;
+			}
+	
 	String[] rps = {"r", "p", "s"};
 	String computerMove = rps[new Random().nextInt(rps.length)];
 
 	public void RockPaperScissors() {
 		
-		Scanner rps = new Scanner(System.in);
+	//	Scanner rps = new Scanner(System.in);
 		
 		while(true) {
 			String playerMove;
@@ -22,7 +29,7 @@ public class RPS {
 				System.out.println("\t** YOU ARE NOW PLAYING: ROCK, PAPER, SCISSORS **");
 				System.out.println("\n> Your moves are: r, p or s. "
 						+ "\n\tEnter your move now:");
-				playerMove = rps.nextLine();
+				playerMove = allinOne.nextLine();
 				
 				// This is a validation for the game. If the user does not enter a valid move,
 				// the computer asks to try again until a valid input is entered.
@@ -61,13 +68,12 @@ public class RPS {
 			// Here we ask the user if they want to keep playing or not.
 			System.out.println("\n> Would you like to play again?");
 			System.out.println("\n\tEnter Y for yes or N for no");
-			String playAgain = rps.nextLine();
+			String playAgain = allinOne.nextLine();
 			
 			// If the user says Y, the game starts again, else, the game is over.
 			if(!playAgain.equals("y")) {
 				break;
 			}
-			// rps.close();
 		}
 	}
 }
