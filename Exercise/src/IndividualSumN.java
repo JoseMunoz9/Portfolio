@@ -6,7 +6,6 @@ import java.util.Scanner;
 // Given an integer N, return the smallest non-negative integer whose individual digits sum to N.
 
 public class IndividualSumN {
-
 	// Sum of digits - FUNCTION
 	static int getSum(int n) {
 		int sum = 0;
@@ -32,6 +31,7 @@ public class IndividualSumN {
 	public static void main(String[] args) {
 		int N;
 		Scanner myInteger = new Scanner(System.in);
+		
 		System.out.println("==============================");
 		System.out.println("  Welcome to the Coding Game  ");
 		System.out.println("==============================");
@@ -41,16 +41,16 @@ public class IndividualSumN {
 		System.out.println("\t> We will return the smallest positive integer whose individual digits sum to your input.");
 		System.out.println();
 		System.out.println("Ready? Good, let's start..");
+		
 		System.out.println("\t> Enter a valid positive integer:");
 		N = myInteger.nextInt();
-		
+			
 		System.out.println("The smallest non-negative int whose individual digits sum to N is:");
 		smallestNumber(N);
-		
+			
+		myInteger.close();
 		System.out.println("=====================");
 		System.out.println("   HAVE A GOOD DAY   ");
 		System.out.println("=====================");
-		myInteger.close();
 	}
-
 }
