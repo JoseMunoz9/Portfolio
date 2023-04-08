@@ -42,11 +42,30 @@ public class IndividualSumN {
 		System.out.println();
 		System.out.println("Ready? Good, let's start..");
 		
-		System.out.println("\t> Enter a valid positive integer:");
-		N = myInteger.nextInt();
+		boolean running = true;
+		while(running) {
+			System.out.println("\t> Enter a valid positive integer:");
+			N = myInteger.nextInt();
+					
+			System.out.println("The smallest non-negative int whose individual digits sum to N is:");
+			smallestNumber(N);
 			
-		System.out.println("The smallest non-negative int whose individual digits sum to N is:");
-		smallestNumber(N);
+			System.out.println("\nWHAT WOULD YOU LIKE TO DO NOW?");
+			System.out.println("\t> 1. Try again!");
+			System.out.println("\t> 2. Close the application");
+			String menu = myInteger.nextLine();
+			
+			while(!menu.equals("1") && !menu.equals("2")) {
+				System.out.println("\t** INVALID INPUT - TRY AGAIN **");
+				menu = myInteger.nextLine();
+			}
+			if(menu.equals("1")) {
+				System.out.println("Here we go again...");
+			} else if(menu.equals("2")) {
+				System.out.println("\t** APPLICATION CLOSED **");
+				break;
+			}
+		}
 			
 		myInteger.close();
 		System.out.println("=====================");
