@@ -8,8 +8,12 @@ import java.util.Scanner;
 public class IndividualSumN {
 	// Sum of digits - FUNCTION
 	static int getSum(int n) {
+		// Declaring integer 'sum' as '0'
 		int sum = 0;
+		
+		// While-Loop that will execute this statement while the condition is true
 		while(n != 0) {
+			// Sum will be the result of sum plus 'n' modulus of 10
 			sum = sum + n % 10;
 			n = n / 10;
 		}
@@ -17,10 +21,15 @@ public class IndividualSumN {
 	}
 	// With this function we will find the smallest positive number whose sum of its digits is N
 	static void smallestNumber(int N) {
+		// Declaring integer 'i' as 1 (smallest positive integer).
 		int i = 1;
+		
 		while(1 != 0) {
 			// Checking if number has sum of digits = N
+			// Calling the function 'getSum' at index 'i'
 			if(getSum(i) == N) {
+				
+				// Printing the Smallest Positive number
 				System.out.println(i);
 				break;
 			}
