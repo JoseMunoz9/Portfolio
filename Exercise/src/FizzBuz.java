@@ -45,7 +45,7 @@ public class FizzBuz {
 		System.out.println(" ** WELCOME TO THE FIZZ-BUZZ GAME ** ");
 		System.out.println("=====================================");
 		
-		System.out.println("\nEnter an integer");
+		System.out.println("\n\t> Enter an integer");
 		i = myFizzBuzz.nextInt();
 		
 		System.out.println(fizzBuzz(i));
