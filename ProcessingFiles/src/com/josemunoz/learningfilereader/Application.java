@@ -12,8 +12,9 @@ public class Application {
 		
 		File file = new File("myfile.tex");
 		BufferedReader bufferedReader = null;
+		FileReader fileReader = null;
 		try {
-			FileReader fileReader = new FileReader(file);
+			fileReader = new FileReader(file);
 			bufferedReader = new BufferedReader(fileReader);
 			
 			String line = bufferedReader.readLine();
@@ -28,7 +29,12 @@ public class Application {
 			System.out.println("Problem reading the file " + file.getName());
 		} finally {
 			try {
-				bufferedReader.close();
+				if(bufferedReader != null) {
+					bufferedReader.close();
+				}
+				if(fileReader != null) {
+					fileReader.close();
+				}
 			} catch (IOException e) {
 				System.out.println("Unable to close file " + file.getName());
 			}
