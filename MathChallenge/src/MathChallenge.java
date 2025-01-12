@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+// Have the function MathChallenge(num) take the num parameter being passed and return the next number greater than num using the same digits. For example: if num is 123 return 132, if it is 12453 return 12534. If a number has no greater permutations, return -1
+
+// Once the function is working, take the final output string and combine it with the ChallengeToken, both in reverse order and separated by a colon.
+
+// The ChallengeToken: "krofwjc2d".
+
 public class MathChallenge {
 	
 	class Main {
